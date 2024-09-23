@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
@@ -23,18 +24,24 @@ const Navbar = () => {
 
       <div className="flex gap-7 md:flex sm:hidden">
         <ul className="flex gap-3 items-center">
-          <li className="capitalize text-base cursor-pointer text-[#c94238]">
+          <Link
+            to="/"
+            className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+          >
             home
-          </li>
-          <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
+          </Link>
+          <Link
+            to="/about"
+            className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+          >
             about
-          </li>
-          <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
-            shop
-          </li>
-          <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
+          </Link>
+          <Link
+            to="/contact"
+            className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+          >
             contact
-          </li>
+          </Link>
         </ul>
         <div className="flex items-center gap-3">
           <CgProfile size={20} className="text-[#1cb5ed]" />
@@ -67,18 +74,24 @@ const Navbar = () => {
             book now
           </button>
         </li>
-        <li className="capitalize text-base cursor-pointer text-[#c94238]">
+        <Link
+          to="/"
+          className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+        >
           home
-        </li>
-        <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
+        </Link>
+        <Link
+          to="/about"
+          className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+        >
           about
-        </li>
-        <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
-          shop
-        </li>
-        <li className="capitalize text-base cursor-pointer hover:text-[#c94238]">
+        </Link>
+        <Link
+          to="/contact"
+          className="capitalize text-base cursor-pointer text-black hover:text-[#c94238]"
+        >
           contact
-        </li>
+        </Link>
       </ul>
     </div>
   );

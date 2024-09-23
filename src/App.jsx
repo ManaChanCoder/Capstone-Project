@@ -1,21 +1,21 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import GroomFeedback from "./components/GroomFeedback";
-import Product from "./components/Product";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import RootLayout from "./components/layout/RootLayout";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Services />
-      <GroomFeedback />
-      <Product />
-      <Footer />
-    </div>
+    <RootLayout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/login" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/visit" element={<AboutPage />} />
+      </Routes>
+    </RootLayout>
   );
 };
 
