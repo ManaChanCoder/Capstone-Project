@@ -1,18 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import PetShopStory from "../assets/pet-story.png";
 
 const AboutPage = () => {
   return (
     <div>
-      <Navbar />
       <div className="w-full md:h-[808px] sm:h-auto my-10 px-10 py-5 flex md:flex-row sm:flex-col row-span-2 gap-10">
         <div className="md:w-1/2 sm:w-full md:h-full sm:h-[404px]">
           <img src={PetShopStory} alt="" className="h-full w-full" />
         </div>
 
-        <div className="md:w-1/2 sm:w-full h-full">
+        <div className="md:w-1/2 text-sm sm:w-full h-full">
           <h1 className="font-light md:text-7xl sm:text-3xl mb-5 w-[300px]">
             OUR YUMMY STORY
           </h1>
@@ -38,7 +35,6 @@ const AboutPage = () => {
           </p>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

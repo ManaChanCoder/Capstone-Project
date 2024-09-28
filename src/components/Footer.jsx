@@ -2,16 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="mt-10 p-10 bg-[#c94238] text-white grid row-span-2">
-      <div className="w-full h-auto flex md:flex-row sm:flex-col md:row-span-4 sm:row-span-1 justify-center gap-14 px-10 py-5">
-        <div className="w-auto">
+    <div className="w-full mt-10 px-10 pt-10 bg-[#c94238] text-white grid row-span-2">
+      <div className="h-auto flex xl:flex-nowrap flex-wrap md:flex-row sm:flex-col xl:row-span-4 md:row-span-2 sm:col-span-1 justify-center xl:gap-10 md:gap-0 sm:gap-14 px-10 py-5">
+        <div className="w-auto md:w-[50%] xl:text-left md:text-center">
           <h4 className="font-semibold text-xl mb-10">Our Flagship Store</h4>
 
           <p className="font-light text-sm">500 Terry Francine Street</p>
           <p className="font-light text-sm my-5">San Francisco, CA 94158</p>
           <p className="font-light text-sm">Tel: 123-456-7890</p>
         </div>
-        <div className="w-auto">
+        <div className="w-auto md:w-[50%] xl:text-left md:text-center">
           <h4 className="font-semibold text-xl mb-10">Shop</h4>
 
           <ul className="list-none text-sm">
@@ -37,7 +37,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-auto">
+        <div className="w-auto md:w-[50%] xl:text-left md:text-center">
           <h4 className="font-semibold text-xl mb-10">Information</h4>
 
           <ul className="list-none text-sm">
@@ -73,7 +73,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="md:w-[30%] sm:w-auto">
+        <div className="w-auto md:w-[50%] sm:w-auto xl:text-left md:text-center">
           <h4 className="font-semibold text-lg mb-10">
             Get Special Deals & Offers
           </h4>
@@ -95,7 +95,9 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className=""></div>
+      <div className="text-center text-sm font-light my-3">
+        &copy; 2035 by Petsville.
+      </div>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Product = () => {
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed]">
         dog food
       </span>
-      <div className="flex flex-row md:flex-nowrap sm:flex-wrap justify-center row-span-4 md:gap-3 sm:gap-5 mt-2 px-10">
+      <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
         <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
           <img
             src={Food1}
@@ -108,7 +108,7 @@ const Product = () => {
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed] block mt-5">
         cat food
       </span>
-      <div className="flex flex-row md:flex-nowrap sm:flex-wrap justify-center row-span-4 md:gap-3 sm:gap-5 mt-2 px-10">
+      <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
         <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
           <img
             src={Food5}
@@ -197,7 +197,7 @@ const Product = () => {
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed] block mt-5">
         accessories
       </span>
-      <div className="flex flex-row md:flex-nowrap sm:flex-wrap justify-center row-span-4 md:gap-3 sm:gap-5 mt-2 px-10">
+      <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
         <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
           <img
             src={Toy1}
