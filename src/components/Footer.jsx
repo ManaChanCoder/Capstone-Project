@@ -30,11 +30,6 @@ const Footer = () => {
                 Pet Accessories
               </a>
             </li>
-            <li className="">
-              <a href="" className="text-white font-light">
-                Fish
-              </a>
-            </li>
           </ul>
         </div>
         <div className="w-auto md:w-[50%] xl:text-left md:text-center">
@@ -73,7 +68,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-auto md:w-[50%] sm:w-auto xl:text-left md:text-center">
+        {/* <div className="w-auto md:w-[50%] sm:w-auto xl:text-left md:text-center">
           <h4 className="font-semibold text-lg mb-10">
             Get Special Deals & Offers
           </h4>
@@ -86,14 +81,14 @@ const Footer = () => {
               type="email"
               name="email"
               id=""
-              className="w-full py-2 px-5 text-black"
+              className="w-full p-2 outline-none text-black text-sm"
               required
             />
-            <button className="w-full text-lg py-3 bg-transparent hover:bg-black border-[1px] border-black text-black hover:text-white">
+            <button className="w-full text-lg py-1 bg-transparent hover:bg-black border-[1px] border-black text-black hover:text-white">
               Subscribe
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
       <div className="text-center text-sm font-light my-3">
         &copy; 2035 by Petsville.

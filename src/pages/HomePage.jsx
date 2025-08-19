@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import GroomFeedback from "../components/GroomFeedback";
-import Product from "../components/Product";
+// import Product from "../components/Product";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
@@ -13,7 +13,7 @@ const HomePage = () => {
       <Hero />
       <Services />
       <GroomFeedback />
-      <Product />
+      {/* <Product /> */}
       <Footer />
     </div>
   );

@@ -1,32 +1,17 @@
 import React from "react";
-import Food1 from "../assets/pet_food/pet-food-1.png";
-import Food2 from "../assets/pet_food/pet-food-2.png";
-import Food3 from "../assets/pet_food/pet-food-3.png";
-import Food4 from "../assets/pet_food/pet-food-4.png";
-import Food5 from "../assets/pet_food/food-5.png";
-import Food6 from "../assets/pet_food/food-6.png";
-import Food7 from "../assets/pet_food/food-7.png";
-import Food8 from "../assets/pet_food/food-8.png";
-import Toy1 from "../assets/accessories/toy-1.png";
-import Toy2 from "../assets/accessories/toy-2.png";
-import Toy3 from "../assets/accessories/toy-3.png";
-import Toy4 from "../assets/accessories/toy-4.png";
 
 const Product = () => {
   return (
     <div className="w-full mt-10 px10 py-5">
       <h1 className="text-4xl text-center mb-10">Our Products</h1>
 
+      {/* dog food category */}
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed]">
         dog food
       </span>
       <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food1}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food1} alt="" className="self-center w-[150px] h-[150px]" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -40,12 +25,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food2}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food2} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -61,12 +42,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food3}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food3} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -82,12 +59,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food4}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food4} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -101,20 +74,19 @@ const Product = () => {
           </button>
         </div>
       </div>
+
       <button className="ml-[50%] translate-x-[-50%] mt-10 px-10 py-2 bg-[#1cb5ed] hover:bg-[#c94238] rounded-3xl text-white text-base uppercase">
         view all
       </button>
 
+      {/* cat food list product */}
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed] block mt-5">
         cat food
       </span>
+
       <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food5}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food5} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -128,12 +100,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food6}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food6} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -147,12 +115,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food7}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food7} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -169,12 +133,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Food8}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Food8} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -190,20 +150,18 @@ const Product = () => {
           </button>
         </div>
       </div>
+
       <button className="ml-[50%] translate-x-[-50%] mt-10 px-10 py-2 bg-[#1cb5ed] hover:bg-[#c94238] rounded-3xl text-white text-base uppercase">
         view all
       </button>
 
+      {/* accessories category */}
       <span className="uppercase text-sml font-bold ml-10 text-[#1cb5ed] block mt-5">
         accessories
       </span>
       <div className="flex flex-row xl:flex-nowrap md:flex-wrap sm:flex-wrap justify-center xl:row-span md:row-span-2-4 md:gap-3 sm:gap-5 mt-2 px-10">
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Toy1}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Toy1} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -217,12 +175,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Toy2}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Toy2} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -236,12 +190,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Toy3}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Toy3} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville
@@ -255,12 +205,8 @@ const Product = () => {
           </button>
         </div>
 
-        <div className="md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
-          <img
-            src={Toy4}
-            alt=""
-            className="w-[150px] h-[150px] ml-[50%] translate-x-[-50%]"
-          />
+        <div className="flex  flex-col md:w-[300px] sm:w-[400px] h-auto shadow-xl py-5 px-10">
+          {/* <img src={Toy4} alt="" className="w-[150px] h-[150px] self-center" /> */}
 
           <h5 className="uppercase text-sm font-light my-5 text-[#c94238]">
             petsville

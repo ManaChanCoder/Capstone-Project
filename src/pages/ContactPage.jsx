@@ -1,8 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate message before submitting
+    const isValidMessage = validateMessage();
+    if (!isValidMessage) {
+      return; // Stop form submission if validation fails
+    }
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/send-email", // Backend endpoint
+        formData
+      );
+      alert(response.data.message || "Email sent successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to send email. Please try again later.");
+    }
+  };
+
+  const validateMessage = () => {
+    const message = formData.message.trim();
+    const wordCount = message.split(/\s+/).length;
+
+    if (wordCount < 35) {
+      alert("Message must contain at least 35 words.");
+      return false; // Validation failed
+    }
+
+    return true; // Validation passed
+  };
+
   return (
     <div>
       <div className="my-10 px-10 w-full">
@@ -32,70 +78,77 @@ const ContactPage = () => {
 
         <div className="xl:w-1/2 md:w-full sm:w-full my-10 px-5 mx-auto">
           <form
-            action="#"
-            className="flex md:flex-row sm:flex-col justify-center row-span-2 md:gap-7 sm:gap-3 mb-3"
+            onSubmit={handleSubmit}
+            className="flex flex-col col-span-3 gap-3"
           >
-            <div className="">
-              <label htmlFor="" className="font-light text-base">
-                First Name *
-              </label>
+            <div>
+              <label className="font-light text-base">First Name *</label>
               <input
                 type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
                 className="w-full py-2 px-3 border-[1px] border-black outline-none"
-                id=""
               />
             </div>
-            <div className="">
-              <label htmlFor="" className="font-light text-base">
-                Last Name *
-              </label>
+            <div>
+              <label className="font-light text-base">Last Name *</label>
               <input
                 type="text"
-                name=""
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
                 className="w-full py-2 px-3 border-[1px] border-black outline-none"
-                id=""
               />
             </div>
-          </form>
-
-          <form action="#" className="flex flex-col col-span-3 gap-3">
-            <div className="">
-              <label htmlFor="" className="font-light text-base">
-                Email *
-              </label>
+            <div>
+              <label className="font-light text-base">Email *</label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full py-2 px-3 border-[1px] border-black outline-none"
-                id=""
               />
             </div>
-            <div className="">
-              <label htmlFor="" className="font-light text-base">
-                Phone *
-              </label>
+            <div>
+              <label className="font-light text-base">Phone *</label>
               <input
-                type="email"
+                type="text" // Change to text to allow leading zeros
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                pattern="^09\d{9}$" // Regex to ensure the number starts with 09 and has 11 digits
+                title="Phone number must start with 09 and be 11 digits long"
                 className="w-full py-2 px-3 border-[1px] border-black outline-none"
-                id=""
               />
             </div>
-            <div className="">
-              <label htmlFor="" className="font-light text-base">
+            <div>
+              <label className="font-light text-base">
                 Leave your message here... *
               </label>
               <textarea
-                name=""
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full py-2 px-3 border-[1px] border-black outline-none h-[120px]"
-                id=""
+                onBlur={validateMessage} // Custom validation for word count
               ></textarea>
             </div>
+            <div className="flex flex-row justify-end">
+              <button
+                type="submit"
+                className="text-white bg-[#c94238] hover:bg-[#05307a] px-14 py-2"
+              >
+                Submit
+              </button>
+            </div>
           </form>
-
-          <div className="flex flex-row justify-end ">
-            <button className="text-white bg-[#c94238] hover:bg-[#05307a] px-14 py-2">
-              Submit
-            </button>
-          </div>
         </div>
 
         <h3 className="text-center font-semibold text-3xl mt-[60px] mb-10">
