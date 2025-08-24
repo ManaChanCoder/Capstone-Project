@@ -13,7 +13,7 @@ import { CgProfile } from "react-icons/cg";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { BsCart2 } from "react-icons/bs";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/logo.png";
 import { LuPhoneCall } from "react-icons/lu";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { db, storage, auth } from "../db/Firebase";
